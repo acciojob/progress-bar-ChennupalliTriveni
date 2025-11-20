@@ -34,11 +34,10 @@ function update() {
     }
   });
 
-  // update progress bar width
   const actives = document.querySelectorAll('.active');
-  progress.style.width = ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
+  progress.style.width =
+    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
 
-  // enable/disable buttons
   prev.disabled = currentActive === 1;
   next.disabled = currentActive === circles.length;
 }
